@@ -75,11 +75,49 @@ class Salient_UI_Assets {
 
 		salient_ui_log( '✓ CSS de base chargé : salient-ui-base' );
 
+		// Enqueue GSAP Core (bibliothèque d'animation)
+		wp_enqueue_script(
+			'gsap',
+			'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js',
+			array(), // Pas de dépendances
+			'3.13.0',
+			true // Charger dans le footer
+		);
+
+		// Enqueue GSAP ScrollTrigger Plugin
+		wp_enqueue_script(
+			'gsap-scroll-trigger',
+			'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js',
+			array( 'gsap' ), // Dépend de GSAP
+			'3.13.0',
+			true // Charger dans le footer
+		);
+
+		// Enqueue GSAP SplitText Plugin
+		wp_enqueue_script(
+			'gsap-split-text',
+			'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js',
+			array( 'gsap' ), // Dépend de GSAP
+			'3.13.0',
+			true // Charger dans le footer
+		);
+
+		// Enqueue GSAP TextPlugin
+		wp_enqueue_script(
+			'gsap-text-plugin',
+			'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/TextPlugin.min.js',
+			array( 'gsap' ), // Dépend de GSAP
+			'3.13.0',
+			true // Charger dans le footer
+		);
+
+		salient_ui_log( '✓ GSAP et plugins chargés : gsap, gsap-scroll-trigger, gsap-split-text, gsap-text-plugin' );
+
 		// Enqueue JavaScript Core (utilitaires communs)
 		wp_enqueue_script(
 			'salient-ui-core',
 			SALIENT_UI_URL . 'assets/js/salient-ui-core.js',
-			array( 'jquery' ), // Dépendance à jQuery
+			array( 'jquery', 'gsap' ), // Dépendance à jQuery et GSAP
 			SALIENT_UI_VERSION,
 			true // Charger dans le footer
 		);
