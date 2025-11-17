@@ -75,6 +75,17 @@ class Salient_UI_WPBakery
 			'Salient_UI_Arrow_Icon_Button', // Élément Arrow Icon Button
 			'Salient_UI_Dual_Text_Button', // Élément Dual Text Button
 			'Salient_UI_Particle_Glow_Button', // Élément Particle Glow Button
+			'Salient_UI_Blur_Reveal', // Élément Blur Reveal
+			'Salient_UI_Countdown', // Élément Countdown
+			'Salient_UI_Read_More', // Élément Read More
+			'Salient_UI_Scramble_Text', // Élément Scramble Text
+			'Salient_UI_Split_Text_Animation', // Élément Split Text Animation
+			'Salient_UI_Flair_Button', // Élément Flair Button
+			'Salient_UI_Text_Shimmer', // Élément Text Shimmer
+			'Salient_UI_Blurry_Button', // Élément Blurry Button
+			'Salient_UI_Stretchy_Button', // Élément Stretchy Button
+			'Salient_UI_Arrow_Button_V5', // Élément Arrow Button v5
+			'Salient_UI_Squeezy_Radius_Button', // Élément Squeezy Radius Button
 		);
 
 		salient_ui_log('Nombre d\'éléments à charger : ' . count($elements));
